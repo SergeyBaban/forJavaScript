@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> для функций</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let a;
+        let b;
+        function sum(a,b)
+        {
+            return a+b;
+        }
+        function mult(a,b)
+        {
+            return a*b;
+        }
+        function dev(a,b)
+        {
+            return a/b;
+        }
+        function subtraction(a,b)
+        {
+            return a-b;
+        }
+        a = +prompt("Введите число a");
+        b = +prompt("Введите число b");
+        alert("a+b = " + sum(a,b) + "\n"
+             + "a*b = " + mult(a,b) + "\n"
+             + "a/b = " + dev(a,b) + "\n"
+             + "a - b = " + subtraction(a,b) + "\n");
+    </script>
+</body>
+</html>

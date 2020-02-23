@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'сложение':
+                    return arg1 + arg2;
+                    break;
+                case 'вычитание':
+                    return arg1 - arg2;
+                    break;
+                case 'деление':
+                    return arg1 / arg2;
+                    break;
+                case 'умножение':
+                    return arg1 * arg2;
+                    break;
+            }
+        }
+        let a;
+        let b;
+        a = +prompt("Введите число a");
+        b = +prompt("Введите число b");
+        let oper = prompt("Введите операцию");
+        let x = mathOperation(a,b,oper);
+        alert(x);
+    </script>
+</body></html>

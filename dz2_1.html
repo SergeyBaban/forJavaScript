@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var  a = 1, b = 1, c, d;
+        c = ++a; alert(c);// переменная a вначале увеличивается на единицу, а потом присваивается с, с = 2, a = 2
+        d = b++; alert(d);// переменная b вначале присваивается d, а только потом увеличивается, d = 1, b = 2
+        c = (2+ ++a); alert(c);// переменная а еще раз увеличивается и становится a = 3, а потом складывается с 2, с = 5
+        d = (2+ b++); alert(d);// переменная b складывается с 2, а потом увеличивается на 2, d = 4, b = 3
+        alert(a);
+        alert(b);
+    </script>
+</body>
+</html>

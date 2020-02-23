@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>выбор операции</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = +prompt("Введите число a");
+        var b = +prompt("Введите число b");
+        if(a>=0 && b>=0)
+            alert(a - b);
+        else if(a<0 && b<0)
+            alert(a*b);
+        else if ( a * b < 0 )
+            alert(a + b);
+        else 
+            alert("не число");
+    </script>
+</body>
+</html>
