@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        console.log("Задача 1");
+        let i = 1;
+        let iArr = [];
+
+        while (i <= 100) {
+            if (i == 1) {
+                iArr.push(1)
+            } else {
+                let result = 2;
+                let j = 2;
+                while (i % j !== 0) {
+                    j += 1;
+                    result += 1;
+                }
+                if (result == i) {
+                    iArr.push(result);
+                }
+            }
+            i += 1;
+        }
+        console.log(iArr);
+        console.log("Задачи 2 и 3");
+        function countBasketPrice(basket) {
+            var sum = 0;
+
+            for (let i = 0; i < basket.length; i++) {
+                sum = sum + basket[i][1];
+            }
+            return sum;
+        }
+        
+        var basket = [
+            ["Куртка", 5000],
+            ["Штаны", 3000],
+            ["Футболка", 1000]
+        ];
+        a = countBasketPrice(basket);
+        console.log("сумма корзины: " + a);
+        
+        console.log("Задача 4");
+        for (let i = 0; i < 9; i++, console.log(i)) {}
+        console.log("Задача 5");
+        let arr = [];
+        let end = 0;
+        while (end < 20) {
+            end++;
+            arr.push('x');
+            console.log(arr);
+        }
+    </script>
+
+</body></html>
