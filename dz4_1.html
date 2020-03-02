@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dz4_1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        
+        var my_factor = {
+            hundreds : 0,
+            tens : 0,
+            ones : 0,
+            inputValue: function() {
+                var temp = +prompt("введите число");
+                if (!Number.isInteger(temp))
+                    {
+                        console.log("Введите целое число");
+                        return null;
+                    }
+                else if (temp>999){
+                    console.log("Число больше 999 - это ошибка");
+                    return null;
+                }
+                else {
+                    if (temp/100 < 1)
+                        this.hundreds = 0;
+                    else{
+                        this.hundreds = Math.floor(temp/100);
+                    }
+                    temp = temp - this.hundreds*100;
+                    if (temp/10 < 1)
+                        this.tens = 0;
+                    else{
+                        this.tens = Math.floor(temp/10);
+                    }
+                    temp = temp - this.tens*10;
+                    this.ones = temp;
+                    return true;
+                }
+            },
+            printValue:function(){
+                console.log("число сотен " + this.hundreds);
+                console.log("число десятков " + this.tens);
+                console.log("число единиц " + this.ones);
+            }
+        };
+        if(my_factor.inputValue())
+            my_factor.printValue();
+
+    </script>
+</body>
+
+</html>
