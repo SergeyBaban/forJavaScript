@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dz5_1</title>
+    
+</head>
+<body>
+    <script>
+        function makeTable(){
+            let newTable = document.createElement( 'table' );
+            for (let i = 0; i<3;i++){
+                let newTr = newTable.insertRow(i);
+                for (let j = 0; j<4;j++){
+                    let newTd = newTr.insertCell(j);
+                    newTd.height = '50px';
+                    newTd.width = '50px'; 
+                    newTd.style = "border: 1px solid black";
+                    newTd.innerText = "eee";
+                }
+                
+            }
+            document.body.appendChild( newTable );
+            
+            
+        };
+        makeTable();
+        
+        
+        let But = document.createElement('button');
+        But.textContent = "Очистить";
+        document.body.appendChild(But);
+        But.addEventListener('click',function(){
+            let table = document.querySelector('table');
+            let I = table.rows.length;
+            let J = table.rows[0].cells.length;
+            for (let i = 0; i<I;i++){
+                for(let j = 0; j<J;j++){
+                    table.rows[i].cells[j].innerText = " "
+                }
+            }
+            
+        });
+        
+        
+
+    </script>
+</body>
+</html>
