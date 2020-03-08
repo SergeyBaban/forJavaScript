@@ -9,14 +9,15 @@ function makeNums(){
             newTd.height = '50px';
             newTd.width = '50px'; 
             let newButton = document.createElement('button');
-            
+            newButton.className = 'buts';
             newButton.textContent = lets[k];
             newTd.appendChild(newButton);
             k = k + 1;
         }
         
     }
-    document.body.appendChild( newTable );
+    let container = document.querySelector("div.container");
+    container.appendChild( newTable );
     
     
 };

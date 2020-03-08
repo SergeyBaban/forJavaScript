@@ -1,0 +1,15 @@
+
+.inputWindow{
+    width: 232px;
+}
+.container{
+    width: 250px;
+    margin: 0 auto;
+    background-color:white;
+}
+.buts{
+    color: gray;
+}
+.backspace{
+    color: gray;
+}
