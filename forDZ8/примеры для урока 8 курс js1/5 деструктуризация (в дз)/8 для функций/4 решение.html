@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //по умолчанию присваиваем пустой объект
+        function renderStatusBar({healthPoints = 100, score = 0, ammo = 30} = {}) {
+            console.log(healthPoints, score, ammo);
+        }
+
+        //теперь функцию можно вызывать и вообще ничего не передавать
+        renderStatusBar();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const user = {
+            id: 7,
+            name: 'Alex',
+            role: 'user',
+        };
+        let {id, name, role} = user;
+        //7 "Alex" "user"
+        console.log(id, name, role);
+
+        let {nomer, imya, rol} = user;
+        //undefined undefined undefined
+        console.log(nomer, imya, rol);
+    </script>
+</body>
+</html>

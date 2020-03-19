@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BaseUser {
+            constructor() {
+                this.username = null;
+            }
+
+            showName() {
+                console.log(this.username);
+            }
+        }
+
+        const baseuser = new BaseUser();
+        baseuser.showName(); //null
+
+        class User extends BaseUser {
+            constructor(name) {
+                super();
+                this.username = name;
+            }
+        }
+
+        const user = new User('alex');
+        user.showName(); //alex
+
+        /* Не смотря на то, что showName есть только в BaseUser, в момент его вызова
+        this в нем указывает на user. */
+
+    </script>
+</body>
+</html>

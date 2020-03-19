@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const user = {
+            name: 'Alex',
+            images: ['one.jpg', 'two.jpg'],
+            birthDate: {
+                day: 3,
+                month: 'january',
+                year: 2000,
+            },
+        };
+        let {
+            name,
+            images: [image1, image2],
+            birthDate: {
+                day,
+                month,
+                year,
+            }
+        } = user;
+        //Alex one.jpg two.jpg 3 january 2000
+        console.log(name, image1, image2, day, month, year);
+    </script>
+</body>
+</html>

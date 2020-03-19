@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let arr = ['Москва', 'Лондон', 'Токио'];
+        let [, secondCity] = arr;
+        //Лондон
+        console.log(secondCity);
+
+        let [firstCity, , lastCity] = arr;
+        //Москва Токио
+        console.log(firstCity, lastCity);
+    </script>
+</body>
+</html>

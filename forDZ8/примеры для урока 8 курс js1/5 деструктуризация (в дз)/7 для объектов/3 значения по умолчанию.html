@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const welcome = {};
+        let {text = "Hi, can i help you?"} = welcome;
+        //Hi, can i help you?
+        console.log(text);
+
+        const user = {
+            name: 'Alex',
+            avatarUrl: 'https://site.ru/userImages/alex.jpg',
+        };
+        let {name, avatarUrl = "https://site.ru/defaultAvatar.jpg"} = user;
+        //Alex https://site.ru/userImages/alex.jpg
+        console.log(name, avatarUrl);
+    </script>
+</body>
+</html>

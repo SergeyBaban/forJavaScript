@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            userName: 'John',
+            sayHello() {
+                console.log(this);
+                console.log(this.userName);
+            }
+        };
+        
+        //Window
+        //undefined
+        //setTimeout(user.sayHello, 1000);
+
+        //bind создал новую функцию, в которой this всегда равен user
+        //setTimeout(user.sayHello.bind(user), 1000);
+
+        //bind - создает новую функцию, которую потом можно вызвать
+        //let showName = user.sayHello.bind(user);
+        //showName();
+        //console.log(showName);
+        
+        //это не сработает, контекст уже жестко привязан
+        //showName.call(Window);
+    </script>
+</body>
+</html>

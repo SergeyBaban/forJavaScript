@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* на самом деле при использовании var переменная "а" 
+        создается как свойство объекта window, т.е. window.a */
+        var a = 2;
+
+        // можно посмотреть содержимое window
+        // window;
+        // debugger;
+
+
+        function showA() {
+            console.log(this.a);
+        }
+
+        showA(); //2
+    </script>
+</body>
+</html>

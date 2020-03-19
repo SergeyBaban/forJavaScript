@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Показать имя пользователя</button>
+
+    <script>
+        'use strict';
+
+        class User {
+            constructor(username) {
+                this.username = username;
+                this.buttonElement = document.querySelector('button');
+
+                /* в таком виде this будет HTMLButton​Element, т.к. при
+                клике, функцию showUserName вызывает именно объект
+                HTMLButton​Element, а у него нет свойства username и
+                мы получим:
+                Uncaught ReferenceError: showUserName is not defined */
+                // this.buttonElement.addEventListener('click', this.showUserName);
+
+                /* в этом случае мы с помощью bind создаем новую функцию из
+                this.showUserName, в которой this всегда будет указыавть но
+                объект типа User. Объект события MouseEvent по прежнему будет
+                передаваться в функцию обработчик.*/
+                this.buttonElement.addEventListener('click', this.showUserName.bind(this))
+            }
+
+            showUserName(event) {
+                alert(this.username);
+                // мы также можем здесь получать объект события
+                console.log(event);
+            }
+        }
+
+        const user1 = new User('Alex');
+    </script>
+</body>
+</html>

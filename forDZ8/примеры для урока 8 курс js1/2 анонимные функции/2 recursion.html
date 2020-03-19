@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b = 10;
+        
+        //здесь function a() уже не анонимная, у нее есть имя
+        let myFunc = function a() {
+            console.log(b);
+            if (b > 0) {
+                b--;
+                a();
+            }
+        };
+
+        myFunc();
+    </script>
+</body>
+</html>

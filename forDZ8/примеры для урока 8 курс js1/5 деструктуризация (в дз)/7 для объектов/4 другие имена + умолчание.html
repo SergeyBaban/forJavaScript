@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let user = {
+            name: 'Ivan',
+        };
+        let {name: n, enterPhrase: ep = 'всем привет!'} = user;
+        //Ivan всем привет!
+        console.log(n, ep);
+    </script>
+</body>
+</html>

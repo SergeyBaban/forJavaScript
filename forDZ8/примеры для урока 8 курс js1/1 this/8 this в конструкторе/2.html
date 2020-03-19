@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class Post {
+            constructor(id, text) {
+                this.id = id;
+                this.text = text;
+                console.log(this); //this указывает на вновь создаваемый объект
+            }
+        }
+
+        const post1 = new Post(1, 'hello');
+        const post2 = new Post(2, 'world');
+    </script>
+</body>
+
+</html>

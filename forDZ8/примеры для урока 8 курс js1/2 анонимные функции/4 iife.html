@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Immediately Invoked Function Expression
+        (function () {
+            let $ = 'hello';
+            let jQuery = 'world';
+            console.log($);
+            console.log(jQuery);
+        })();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        let body = $('body');
+        console.log(body);
+    </script>
+</body>
+
+</html>

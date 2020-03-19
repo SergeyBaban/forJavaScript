@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Замыкание - это функция, которая в своем теле использует
+        переменные и/или функции, созданные за ее пределами,
+        и которые ей не были переданы как аргументы.
+        */
+
+        function foo() {
+            var a = 2;
+
+            function bar() {
+                console.log(a); // 2
+            }
+
+            bar();
+        }
+
+        foo();    
+    </script>
+</body>
+
+</html>

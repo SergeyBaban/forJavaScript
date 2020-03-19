@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Кнопка</button>
+
+    <script>
+        'use strict';
+
+        class Hello {
+            button = document.querySelector('button');
+
+            constructor() {
+                this.button.addEventListener('click', this.buttonClickHandler);
+            }
+
+            buttonClickHandler = (event) => {
+                //теперь в функции обработчике this всегда будет указывать на сам объект,
+                //а не на кнопку
+                console.log(this);
+            }
+        }
+
+        let hello1 = new Hello;
+    </script>
+</body>
+</html>

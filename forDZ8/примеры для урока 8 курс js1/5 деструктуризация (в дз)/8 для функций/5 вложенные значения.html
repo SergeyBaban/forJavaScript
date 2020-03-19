@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const images = {
+            senderId: 5,
+            images: ['one.png', 'two.png'],
+            sender: {
+                name: 'Ivan',
+                surname: 'Ivanov',
+            },
+        };
+
+        function checkImages({senderId, images: [image1, image2], sender: {name: n, surname: s}}) {
+            console.log(senderId, image1, image2, n, s);
+        }
+
+        //5 "one.png" "two.png" "Ivan" "Ivanov"
+        checkImages(images);
+    </script>
+</body>
+</html>

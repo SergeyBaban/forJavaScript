@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        /* не важно как мы создали переменную через val или let, т.к.
+        в любом случае в строгом режиме в функцию this у нас не
+        будет передаваться */
+        var a = 2;
+
+        // window;
+        // debugger;
+
+
+        function showA() {
+            /* т.к. this не передается в глобальную функцию в строгом
+            режиме, то здесь мы получим ошибку:
+            Uncaught TypeError: Cannot read property 'a' of undefined
+             */
+            console.log(this.a);
+        }
+
+        showA();
+    </script>
+</body>
+</html>

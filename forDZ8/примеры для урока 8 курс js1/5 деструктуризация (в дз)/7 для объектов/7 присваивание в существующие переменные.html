@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let hello, world;
+        let obj = {
+            hello: 'hello',
+            world: 'world',
+        };
+
+        //Uncaught SyntaxError: Unexpected token '='
+        {hello, world} = obj;
+
+        //ok!
+        ({hello, world} = obj);
+        console.log(hello, world);
+    </script>
+</body>
+</html>

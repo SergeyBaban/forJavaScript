@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            firstName: 'John',
+            sayUsual() {
+                setTimeout(function() {
+                    //window
+                    console.log(this);
+                }, 1000);
+            },
+            sayArrow() {
+                setTimeout(() => {
+                    //user
+                    console.log(this);
+                }, 2000);
+            }
+        };
+        user.sayUsual(); //window
+        user.sayArrow(); //user
+
+        /* в стрелочной функции this равен this'у, который был у вызывающей функции в 
+        момент объявления стрелочной функции, не в момент вызова */
+    </script>
+</body>
+</html>

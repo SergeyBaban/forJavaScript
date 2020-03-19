@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function snakeModule() {
+            let color = 'black';
+            let speed = 3;
+            let winLengtn = 50;
+            let currentLength = 1;
+
+            function checkWin() {
+                return currentLength > winLengtn;
+            }
+
+            return {
+                isWin: checkWin,
+            };
+        }
+        
+        let snake = snakeModule();
+        console.log(snake.isWin());
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function renderStatusBar({healthPoints = 100, score = 0, ammo = 30}) {
+            console.log(healthPoints, score, ammo);
+        }
+
+        //Uncaught TypeError: Cannot read property 'healthPoints' of undefined
+        renderStatusBar();
+
+        //так работает, но надо обязательно передать пустой объект
+        renderStatusBar({});
+    </script>
+</body>
+</html>

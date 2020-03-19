@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вызов функции в глоб. контексте, не строгий режим</title>
+</head>
+<body>
+    <script>
+        function hello() {
+            /* в не строгом режиме this передается автоматически */
+            console.log(this);
+        }
+
+        hello(); //window
+
+        /* вызов происходит на самом деле так:
+        window.hello() 
+
+        потому что объявление function hello() {}
+        на самом деле делает эту функцию свойством hello в
+        объекте window. Можно объект развернуть и поискать
+        свойство hello в нем.
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /* 
+        let fn = () => {
+            console.log(this);
+        }
+        */
+
+        /* этот объект конструируется во время работы анонимной функции, которая запускается 
+        при открытии страницы и в этой анонимной функции this указывает на window*/
+        let user = {
+            firstName: 'John',
+            sayArrow: () => { //ссылка на эту функцию создается когда конструируется сам объект user, 
+                console.log(this); //поэтому это тоже самое что и функция fn выше
+                
+            },
+        };
+        user.sayArrow();//window
+
+        /* в стрелочной функции this равен this'у, который был у вызывающей функции в 
+        момент объявления стрелочной функции, не в момент вызова */
+    </script>
+</body>
+</html>

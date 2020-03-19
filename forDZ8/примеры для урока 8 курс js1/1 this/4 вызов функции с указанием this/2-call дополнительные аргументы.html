@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        function addInfo(age, position) {
+            this.age = age;
+            this.position = position;
+        }
+
+        let user1 = {
+            userName: 'Alex'
+        }
+
+
+        addInfo.call(user1, '30', 'developer');
+        console.log(user1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let arr1 = [1, 7, 4];
+        let arr2 = [...arr1];
+        arr1[0] = 111;
+        //[111, 7, 4]      [1, 7, 4]
+        console.log(arr1, arr2);
+    </script>
+</body>
+</html>

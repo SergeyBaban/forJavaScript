@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunc() {
+            let name = 'John';
+
+            function sayName() {
+                console.log(name);
+            }
+
+            return sayName;
+        }
+
+        let showName = myFunc();
+        showName();
+    </script>
+</body>
+</html>

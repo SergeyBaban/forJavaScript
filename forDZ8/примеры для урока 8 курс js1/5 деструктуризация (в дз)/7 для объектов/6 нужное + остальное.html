@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const message = {
+            id: 9492,
+            text: 'hello world!',
+            authorName: 'Иван',
+        };
+        let {text, ...other} = message;
+        //hello world!
+        console.log(text);
+        
+        //{id: 9492, authorName: "Иван"}
+        console.log(other);
+    </script>
+</body>
+</html>

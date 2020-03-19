@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function snakeModule(color, speed) {
+            let snakeColor = color;
+            let snakeSpeed = speed;
+            let snakeWinLengtn = 50;
+            let snakeCurrentLength = 1;
+
+            function checkWin() {
+                return snakeCurrentLength > snakeWinLengtn;
+            }
+
+            function changeSpeed(speed) {
+                snakeSpeed = speed;
+            }
+
+            function getSpeed() {
+                return snakeSpeed;
+            }
+
+            return {
+                isWin: checkWin,
+                changeSpeed: changeSpeed,
+                getSpeed: getSpeed,
+            };
+        }
+
+        let snake = snakeModule('yellow', 10);
+        console.log(snake.getSpeed());
+        snake.changeSpeed(2);
+        console.log(snake.getSpeed());
+    </script>
+</body>
+
+</html>

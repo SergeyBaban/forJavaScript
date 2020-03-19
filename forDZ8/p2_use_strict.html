@@ -1,0 +1,140 @@
+<script>
+    "use strict";
+    //Using a variable, without declaring it, is not allowed:
+    try {
+        x = 12;
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Using an object, without declaring it, is not allowed:
+    try {
+        x = {
+            p1: 10,
+            p2: 20
+        };
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Deleting a variable (or object) is not allowed.
+    try {
+        "use strict";
+        var x = 3.14;
+        delete x; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Deleting a function is not allowed.
+    try {
+        function x(p1, p2) {};
+        delete x; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Duplicating a parameter name is not allowed:
+    try {
+        function x(p1, p1) {}; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Octal numeric literals are not allowed:
+    try {
+        var x = 010;
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Octal escape characters are not allowed:
+    try {
+        var x = "\010";
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Writing to a read-only property is not allowed:
+    try {
+        var obj = {};
+        Object.defineProperty(obj, "x", {
+            value: 0,
+            writable: false
+        });
+        obj.x = 3.14; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+
+    //Writing to a get-only property is not allowed:
+    try {
+        var obj = {get x() {
+                return 0
+            }
+        };
+        obj.x = 3.14; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //Deleting an undeletable property is not allowed:
+    try {
+        delete Object.prototype; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+
+    //The word arguments cannot be used as a variable:
+    try {
+        var arguments = 3.14; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //The with statement is not allowed:
+    try {
+        with(Math) {
+            x = cos(2)
+        }; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //For security reasons, eval() is not allowed to create variables in the scope from which it was called:
+    try {
+        eval("var x = 2");
+        alert(x); // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    //The word eval cannot be used as a variable:
+    try {
+        var eval = 3.14; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    /*
+The this keyword in functions behaves differently in strict mode.
+The this keyword refers to the object that called the function.
+If the object is not specified, functions in strict mode will return undefined and functions in normal mode will return the global object (window):
+    */
+    try {
+        function myFunction() {
+            alert(this); // will alert "undefined"
+        }
+        myFunction();
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+    /*
+    Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.
+
+These are:
+
+implements
+interface
+let
+package
+private
+protected
+public
+static
+yield
+    */
+    try {
+        var public = 1500; // This will cause an error
+    } catch (ex) {
+        console.error("Error: " + ex.message);
+    }
+</script>
